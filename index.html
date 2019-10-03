@@ -1,0 +1,1233 @@
+<!doctype html>
+<html lang="en">
+    <head>
+      <title>Tripup</title>
+        <style>
+            body{
+                margin:0px;
+                padding:0px;
+            }
+            .navbar{
+                background: whitesmoke;
+            }
+            .content{
+                z-index: 1;
+                position: absolute;
+                left: 8%;
+            }
+            i{
+                font-family: fontAwesome;
+                color: #FF527E;
+            }
+            .bg-text
+            {
+                float: left;
+                position:absolute;
+                bottom: 18%;
+                left: 3.2%;
+                z-index: 0;
+                display: block;
+                color:lightgrey;
+                font-size:60px;
+                transform:rotate(990deg);
+                -webkit-transform:rotate(990deg);
+            }
+            h6{
+                font-size: 130%;
+                display: block;
+            }
+            #se::placeholder{
+                color: white;
+            }
+            .head{
+                color: black;
+                font-size:60px;
+                position: absolute;
+               display: block;
+                left:27%;
+                top:25%;
+                z-index: 1;
+            }
+            .sub-head{
+                color:white;
+                position: absolute;
+                display: block;
+                left:35% ;
+                top:40%;
+                z-index: 1;
+            }
+            .text-positionn{
+                font-family: fontAwesome;
+                position:absolute;
+                display: block;
+                z-index: 1;
+                left: 22%;
+                top:48%;
+                padding: 15px;
+                width: 600px;
+                color: black;
+            }
+            .searchbar{
+                background:#FF527E;
+                position: absolute;
+                width: 180px;
+                top:48%;
+                right: 23%;
+                height: 9%;
+                display: block;
+                z-index: 1;
+                font-size: 20px;
+                color:white;
+                font-family: fontAwesome;
+            }
+            nav{
+                background-color:#0000;
+                line-height: 80px;
+                display: block;
+                z-index: 1;
+                position: absolute;
+                width: 100%;
+            }
+            nav ul{
+                float:right;
+                margin-right:13%;
+            }
+            nav ul li{
+                list-style-type: none;
+                display: inline-block;
+                z-index: 1;
+            }
+            nav ul li:hover{
+                text-decoration:none;
+            }
+            nav ul li a{
+
+                padding:10px;
+                color:black;
+            }
+            .dots {
+                width: 2px;
+               float: right;
+                margin-right:8%;
+                margin-top: 17%;
+            }
+            .goa{
+                position:absolute;
+                top:90%;
+                border-left:4px solid #FF527E;
+                margin-left:7%;
+                height: 90px;
+                width: 40%;
+                padding:10px;
+            }
+            .goa-head{
+                font-size: 40px;
+            }
+            .goa-subhead{
+                position: relative;
+                top:-36%;
+            }
+            .goa-img{
+                float: right;
+                margin-right:2%;
+                margin-top: -18%;
+            }
+            .circle{
+                margin-left: 7%;
+                margin-top: 39%;
+            }
+            .goa-sec{
+                margin-left: 21%;
+                padding: 30px;
+            }
+            .goa-sec a{
+                float: right;
+                position: absolute;
+                left: 70%;
+                color: black;
+                padding: 3px;
+                background: white;
+                border:1px solid #FF527E;
+                bottom: -16%;
+            }
+            .best-hotel P {
+                border-bottom: 6px solid lightgrey;
+                color: grey;
+                width: 140px;
+                margin-left: 11%;
+                font-size: 17px;
+                padding: 2px;
+                margin-top: 7%;
+            }
+            .pop-text
+            {
+                float: left;
+                position:absolute;
+                z-index: 0;
+                left: 7%;
+                margin-top: 13%;
+                color:lightgrey;
+                font-size:50px;
+                transform:rotate(990deg);
+                -webkit-transform:rotate(990deg);
+            }
+            .goa-img-sec{
+                position: absolute;
+                left: 18%;
+            }
+            .goa-img-secn{
+                position: absolute;
+                left: 18%;
+                top:160%;
+            }
+            .goa-img-secn-cen{
+                position:absolute;
+                top:-3%;
+            }
+            .hovereffect {
+                width:100%;
+                height:100%;
+                float:left;
+                overflow:hidden;
+                position:relative;
+                text-align:center;
+                cursor:default;
+            }
+            .hovereffect:hover img {
+                -ms-transform:scale(1.2);
+                -webkit-transform:scale(1.2);
+                transform:scale(1.2);
+            }
+            .hovereffect img {
+                display:block;
+                position:relative;
+                -webkit-transition:all .4s linear;
+                transition:all .4s linear;
+            }
+            .img-adjust{
+                margin-top: 8%;
+            }
+
+            .intern{
+                border-left:4px solid #FF527E;
+                margin-left:7%;
+                margin-top: 45%;
+                height: 90px;
+                width: 100%;
+                padding:10px;
+            }
+            .intern-head{
+                font-size: 40px;
+            }
+            .intern-subhead{
+                position: relative;
+                top:-36%;
+            }
+            .intern a{
+                float: right;
+                color: black;
+                padding: 3px;
+                background: white;
+                position: relative;
+                top: -110%;
+                right: 15%;
+                border:1px solid #FF527E;
+            }
+            .for-text
+            {
+                float: left;
+                position:absolute;
+                z-index: 0;
+                left: 10%;
+                margin-top:5%;
+                color:lightgrey;
+                font-size:50px;
+                transform:rotate(990deg);
+                -webkit-transform:rotate(990deg);
+            }
+            .best-text
+            {
+                float: left;
+                position:absolute;
+                z-index: 0;
+                left:38%;
+                bottom: -140%;
+                color:lightgrey;
+                font-size:60px;
+                transform:rotate(360deg);
+                -webkit-transform:rotate(360deg);
+            }
+            .cool-text
+            {
+                float: left;
+                position:absolute;
+                z-index: 0;
+                left:31%;
+                bottom: -165%;
+                color:lightgrey;
+                font-size:40px;
+                transform:rotate(360deg);
+                -webkit-transform:rotate(360deg);
+            }
+            .whytrip{
+
+                margin-left:7%;
+                height: 90px;
+                margin-top: 20%;
+                width:17%;
+                color: grey;
+                padding:10px;
+
+            }
+            .whytrip p{
+                font-size: 25px;
+                border-bottom:4px solid #FF527E;
+            }
+
+            .mumbai{
+                margin-top: 10%;
+                border-left:4px solid #FF527E;
+                margin-left:7%;
+                height: 90px;
+                padding:10px;
+            }
+            .mumbai a{
+                float: right;
+                color: black;
+                padding: 3px;
+                background: white;
+                position: relative;
+                top: -75%;
+                right: 15%;
+                border:1px solid #FF527E;
+            }
+            .mum-hotel p{
+                width:23%;
+                border-bottom: 2px solid #FF527E;
+                position: relative;
+                left:2%;
+                color: black;
+            }
+            @media (min-width: 768px) {
+                /* show 3 items */
+                .carousel-inner .active,
+                .carousel-inner .active + .carousel-item,
+                .carousel-inner .active + .carousel-item + .carousel-item {
+                    display: block;
+                }
+
+                .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+                .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+                .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+                    transition: none;
+                }
+
+                .carousel-inner .carousel-item-next,
+                .carousel-inner .carousel-item-prev {
+                    position: relative;
+                    transform: translate3d(0, 0, 0);
+                }
+
+                .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+                    position: absolute;
+                    top: 0;
+                    right: -33.3333%;
+                    z-index: -1;
+                    display: block;
+                    visibility: visible;
+                }
+
+                /* left or forward direction */
+                .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+                .carousel-item-next.carousel-item-left + .carousel-item,
+                .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+                .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+                    position: relative;
+                    transform: translate3d(-100%, 0, 0);
+                    visibility: visible;
+                }
+
+                /* farthest right hidden item must be abso position for animations */
+                .carousel-inner .carousel-item-prev.carousel-item-right {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    display: block;
+                    visibility: visible;
+                }
+
+                /* right or prev direction */
+                .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+                .carousel-item-prev.carousel-item-right + .carousel-item,
+                .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+                .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+                    position: relative;
+                    transform: translate3d(100%, 0, 0);
+                    visibility: visible;
+                    display: block;
+                    visibility: visible;
+                }
+            }
+            .card-adjust{
+                margin-left: 4%;
+            }
+            .kolkata{
+                border-right:4px solid #FF527E;
+                margin-left: 10%;
+                height: 90px;
+                position: absolute;
+                top:580%;
+                width: 500px;
+                text-align: right;
+                padding:10px;
+            }
+            .delhi{
+                margin-top: 5%;
+                border-right:4px solid #FF527E;
+                margin-left: 20%;
+                border-bottom: 1px solid #FF527E;
+                height: 90px;
+                width: 300px;
+                text-align: right;
+                padding:10px;
+            }
+
+            .In-delhi{
+                margin-top: -85px;
+                border-top:1px solid #FF527E;
+                margin-left:42.5%;
+                text-align:left;
+                height: 90px;
+                width: 200px;
+                padding:5px;
+            }
+
+            .bangalore{
+                position:absolute;
+                top:490%;
+                border-left:4px solid #FF527E;
+                margin-left:25%;
+                margin-top: 2%;
+                height: 60px;
+                width: 40%;
+                padding:10px;
+            }
+            .bangalore img{
+                position: relative;
+                left: 13%;
+                top:103%;
+            }
+
+            .In-kolkata{
+                border-top:2px solid #FF527E;
+                margin-left:48%;
+                position: absolute;
+                top:582%;
+                text-align:left;
+                height: 90px;
+                width: 240px;
+            }
+
+
+            .kolkata-subhead{
+                position: relative;
+                top:-30%;
+            }
+
+
+            .In-kolkata a{
+                margin-bottom:-20%;
+                color: black;
+                padding: 3px;
+                background: white;
+                border:1px solid #FF527E;
+            }
+
+            .row img{
+                border-radius: 15px;
+            }
+            .name{
+                position: absolute;
+                bottom: 22%;
+                padding: 5px;
+                background: white;
+                width:150px;
+                z-index: 1;
+
+            }
+            .India{
+                position:absolute;
+                top:670%;
+                border-left:4px solid #FF527E;
+                margin-left:12%;
+                height: 90px;
+                width: 40%;
+                padding:10px;
+            }
+            .top-text
+            {
+                float: left;
+                position:absolute;
+                z-index: 0;
+                left: 15%;
+                top:350%;
+                color:lightgrey;
+                font-size:50px;
+                transform:rotate(990deg);
+                -webkit-transform:rotate(990deg);
+            }
+            .bestindia-text
+            {
+                float: left;
+                position:absolute;
+                z-index: 0;
+                left:18%;
+                bottom: -520%;
+                color:lightgrey;
+                font-size:120px;
+                transform:rotate(360deg);
+                -webkit-transform:rotate(360deg);
+            }
+            .world-text
+            {
+                float: left;
+                position:absolute;
+                z-index: 0;
+                width: 350px;
+                text-align:center;
+                bottom: -185%;
+                right:40%;
+                color:lightgrey;
+                font-size:40px;
+                transform:rotate(360deg);
+                -webkit-transform:rotate(360deg);
+            }
+            .memorial-text
+            {
+                float:right;
+                position:absolute;
+                z-index: 0;
+                left: 164%;
+                bottom: -400%;
+                color:lightgrey;
+                font-size:40px;
+                transform:rotate(360deg);
+                -webkit-transform:rotate(360deg);
+            }
+            .forIndia-text
+            {
+                position:absolute;
+                z-index: 0;
+                left:38%;
+                bottom: -535%;
+                color:grey;
+                font-size:40px;
+                transform:rotate(360deg);
+                -webkit-transform:rotate(360deg);
+            }
+
+            .font-style{
+                font-family: fontAwesome;
+                text-decoration-color: #FF527E;
+            }
+            .price{
+                position: absolute;
+                bottom: 11%;
+                padding: 5px;
+                background: white;
+                width:150px;
+            }
+            .inside-img{
+                font-family: fontAwesome;
+            }
+            .star{
+                position: absolute;
+                bottom: 29.5%;
+                color: #FF527E;
+                left: 38%;
+                background: white;
+                padding: 5.5px;
+                z-index: 1;
+            }
+            .review{
+                position: absolute;
+                bottom: 11%;
+                left: 37%;
+                padding: 3px;
+                background: white;
+                width: 105px;
+            }
+            footer{
+                position:absolute;
+                top :800%;
+                color: white;
+                width:100%;
+                height: 300px;
+                background:#158486 ;
+            }
+            footer button{
+                height: 50px;
+                padding: 10px;
+                width: 150px;
+                position:absolute;
+                top:150px;
+                color: white;
+                background: #26A7A9;
+            }
+            .safe{
+                position:relative;
+                top:190px;
+            }
+            .safe-pay{
+                position:relative;
+                top:215px;
+                right:100px;
+            }
+            .num{
+                position:relative;
+                top:150px;
+            }
+            .time{
+                position:relative;
+                top:190px;
+                right:200px;
+            }
+            .mum-img{
+                position: absolute;
+                left:13%;
+            }
+            .delhi-img{
+                position: absolute;
+                left:13%;
+                top:320%;
+            }
+            .img-radius{
+                border-radius: 10px;
+            }
+        </style>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Beth+Ellen&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    </head>
+    <body>
+             <div class=" navbar" >
+                 <img src="images/logo.PNG" >
+                 <div style="font-size: 24px;">
+                     <i class="fa fa-user-circle-o fa-10x" aria-hidden="true"></i>
+                 </div>
+             </div>
+
+
+             <div >
+                 <div class="container content" >
+                     <img class=" center-img" src="Manali_Feature.jpg" height="500px" width="100%">
+                 </div>
+                 <p class="bg-text">BEST</p>
+                 <h6 class="head">Planning your Holiday</h6>
+                 <p class="sub-head">Find travel packages from sellers across destination</p>
+                 <input size="15" placeholder="Enter City  &#xf107;      |   &#xf073;    Check-Out     |   &#xf073;      Check-Out       |   Rooms &  Guests   " class="text-positionn">
+                 <button id="se"  class="searchbar">&#xf002;  Explore   </button>
+                 <nav>
+                     <ul>
+                         <li><a href="#">Packages</a></li>
+                         <li><a href="#">Hotel</a></li>
+                         <li><a href="#">Flight</a></li>
+                         <li><a href="#">Visa</a></li>
+                     </ul>
+                 </nav>
+
+                     <ul class="dots" >
+                         <i style="color: grey" class="fas fa-circle"></i>
+                         <i class="fas fa-circle"></i>
+                         <i style="color: grey" class="fas fa-circle"></i>
+                         <i class="fas fa-circle"></i>
+                         <i style="color: grey" class="fas fa-circle"></i>
+                     </ul>
+
+             </div>
+             <img  class="circle" src="circle.PNG">
+            <div class="container">
+
+                <div class="goa">
+                    <p class="goa-head">Hotels in Goa</p>
+                    <p class="goa-subhead">Best forever</p>
+                    <img class="goa-img" src="Capture.PNG">
+                </div>
+                <div>
+                    <p class="pop-text">POPULAR</p>
+                </div>
+                <div class="container goa-sec">
+                    <div class="best-hotel">
+                        <p>Best hotel for you</p>
+                    </div>
+                    <a href="#">Explore more</a>
+
+                </div>
+            </div>
+                <div class="container">
+                    <div class="row goa-img-sec">
+                        <div class="col-md-4 hovereffect">
+                            <img class="img-adjust" width="300px" height="200px"   src="images/london.jfif">
+                            <div class="inside-img">
+                                <p class="name">LONDON</p>
+                                <div class="star">
+                                    <i class="fa-star"></i>
+                                    <i class="fa-star"></i>
+                                    <i class="fa-star"></i>
+                                    <i class="fa-star"></i>
+                                    <i class="fa-star"></i>
+                                </div>
+                                <p class="price">RS 25000</p>
+                                <p class="review">(2K review) </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 hovereffect">
+                            <img width="300px" src="images/taj.jfif">
+                            <div class="inside-img">
+                                <p class="name">PARIS</p>
+                                <div class="star">
+                                    <i class="fa-star"></i>
+                                    <i class="fa-star"></i>
+                                    <i class="fa-star"></i>
+                                    <i class="fa-star"></i>
+                                    <i class="fa-star"></i>
+                                </div>
+                                <p class="price">RS 25000</p>
+                                <p class="review">(2K review) </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 hovereffect">
+                            <img class="img-adjust" width="300px" height="200px" src="images/paris.jpg">
+                            <div class="inside-img">
+                                <p class="name">LONDON</p>
+                                <div class="star">
+                                    <i class="fa-star"></i>
+                                    <i class="fa-star"></i>
+                                    <i class="fa-star"></i>
+                                    <i class="fa-star"></i>
+                                    <i class="fa-star"></i>
+                                </div>
+                                <p class="price">RS 25000</p>
+                                <p class="review">(2K review) </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row goa-img-secn">
+                        <div class="col-md-4 hovereffect">
+                            <img class="img-adjust1" width="300px" height="200px"   src="images/london.jfif">
+                            <div class="inside-img">
+                                <p class="name">LONDON</p>
+                                <div class="star">
+                                    <i class="fa-star"></i>
+                                    <i class="fa-star"></i>
+                                    <i class="fa-star"></i>
+                                    <i class="fa-star"></i>
+                                    <i class="fa-star"></i>
+                                </div>
+                                <p class="price">RS 25000</p>
+                                <p class="review">(2K review) </p>
+                            </div>
+
+                        </div>
+                        <div class="col-md-4 hovereffect goa-img-secn-cen">
+                            <img width="300px" src="images/taj.jfif">
+                            <div class="inside-img">
+                                <p class="name">LONDON</p>
+                                <div class="star">
+                                    <i class="fa-star"></i>
+                                    <i class="fa-star"></i>
+                                    <i class="fa-star"></i>
+                                    <i class="fa-star"></i>
+                                    <i class="fa-star"></i>
+                                </div>
+                                <p class="price">RS 25000</p>
+                                <p class="review">(2K review) </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 hovereffect">
+                            <img width="300px" height="200px"  src="images/paris.jpg">
+                            <div class="inside-img">
+                                <p class="name">LONDON</p>
+                                <div class="star">
+                                    <i class="fa-star"></i>
+                                    <i class="fa-star"></i>
+                                    <i class="fa-star"></i>
+                                    <i class="fa-star"></i>
+                                    <i class="fa-star"></i>
+                                </div>
+                                <p class="price">RS 25000</p>
+                                <p class="review">(2K review) </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+             <div class="container">
+
+                 <div class="intern">
+                     <p class="intern-head">International Hotels </p>
+                     <p class="intern-subhead">Let's make world tour</p>
+                     <a href="#">Explore more</a>
+                 </div>
+                 <img src="manali.jpg" width="250px" height="150px" style="margin-left:10%; margin-top:5%">
+                 <img src="images/img3.jpg" width="250px" height="160px" style="position:absolute;left:70%;bottom:-144%">
+                 <img src="manali.jpg" width="250px" height="100px" style="position:absolute;left:50%;bottom:-142%">
+                 <p class="for-text">Forever</p>
+                 <p class="best-text">BEST</p>
+                 <p class="cool-text">Cool</p>
+                 <img src="manali.jpg" width="135px" height="150px" style="position:absolute;left:20%;bottom:-170%">
+                 <img src="images/img3.jpg" width="250px" height="160px" style="position:absolute;left:38%;bottom:-168%">
+                 <img src="images/img2.jfif" width="250px" height="150px" style="position:absolute;left:58%;bottom:-169%">
+                 <img src="images/img4.jpg" width="250px" height="150px" style="position:absolute;left:78%;bottom:-171%">
+
+             </div>
+
+             <div class="container">
+
+                 <div class="whytrip">
+                     <p>Why Tripupp ?  </p>
+                 </div>
+                 <img src="images/custom.PNG" style="margin-left: 10%; position: absolute;bottom: -203%">
+                 <img src="images/tripup.PNG" style="margin-left: 21%; position: absolute;bottom: -204.3%">
+                 <img src="images/expert.PNG" style="margin-left: 47%; position: absolute;bottom: -203%">
+             </div>
+
+              <div class="container">
+                  <div class="mumbai">
+                      <p class="goa-head">Hotels in Mumbai</p>
+                      <p class="goa-subhead">top best forever</p>
+
+                      <div class="mum-hotel">
+                          <p>We present top hotels for you</p>
+                      </div>
+                      <a href="#">Explore more</a>
+              </div>
+            </div>
+        <div class="container ">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner row w-100 mx-auto">
+                    <div class="carousel-item col-md-4 active">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" width="350px" height="200px" src="images/img4.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title">Taj Hotel Mumbai</h4>
+                                <p class="card-text">Top best Forever</p>
+                                <p class="card-text"><small class="text-muted">24K reviews</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item col-md-4">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" width="350px"  height="200px" src="images/img3.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title">Hotel Marine plaza</h4>
+                                <p class="card-text"> Top best Forever</p>
+                                <p class="card-text"><small class="text-muted">12K reviews</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item col-md-4">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" width="350px"  height="200px" src="images/img2.jfif" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title">Hotel Mumbai plaza</h4>
+                                <p class="card-text">Top best Forever</p>
+                                <p class="card-text"><small class="text-muted">14K reviews</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item col-md-4">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="images/img1.jfif" width="350px"  height="200px" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title">Fariyas Hotel Mumbai</h4>
+                                <p class="card-text">Top best Forever</p>
+                                <p class="card-text"><small class="text-muted">15K reviews</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item col-md-4">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="images/paris.jpg" width="350px"  height="200px" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title">Hotel Mumbai plaza</h4>
+                                <p class="card-text">Top best Forever</p>
+                                <p class="card-text"><small class="text-muted">25K reviews</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#myCarousel" role="button"  data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        </div>
+
+             <div class="delhi">
+                 <p class="goa-head">Hotels</p>
+                 <p class="goa-subhead">We present top hotels for you</p>
+             </div>
+             <div class="In-delhi">
+                 <p class="goa-head">In Delhi</p>
+                 <p class="goa-subhead">Let's make delhi tour</p>
+             </div>
+             <div class="container" style="margin-top: 3%">
+                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                     <div class="carousel-inner row w-100 mx-auto">
+                         <div class="carousel-item col-md-4 active">
+                             <div class="card">
+                                 <img class="card-img-top img-fluid" width="350px" height="200px" src="images/img4.jpg" alt="Card image cap">
+                                 <div class="card-body">
+                                     <h4 class="card-title">Taj Hotel Mumbai</h4>
+                                     <p class="card-text">Top best Forever</p>
+                                     <p class="card-text"><small class="text-muted">24K reviews</small></p>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="carousel-item col-md-4">
+                             <div class="card">
+                                 <img class="card-img-top img-fluid" width="350px"  height="200px" src="images/img3.jpg" alt="Card image cap">
+                                 <div class="card-body">
+                                     <h4 class="card-title">Hotel Marine plaza</h4>
+                                     <p class="card-text"> Top best Forever</p>
+                                     <p class="card-text"><small class="text-muted">12K reviews</small></p>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="carousel-item col-md-4">
+                             <div class="card">
+                                 <img class="card-img-top img-fluid" width="350px"  height="200px" src="images/img2.jfif" alt="Card image cap">
+                                 <div class="card-body">
+                                     <h4 class="card-title">Hotel Mumbai plaza</h4>
+                                     <p class="card-text">Top best Forever</p>
+                                     <p class="card-text"><small class="text-muted">14K reviews</small></p>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="carousel-item col-md-4">
+                             <div class="card">
+                                 <img class="card-img-top img-fluid" src="images/img1.jfif" width="350px"  height="200px" alt="Card image cap">
+                                 <div class="card-body">
+                                     <h4 class="card-title">Fariyas Hotel Mumbai</h4>
+                                     <p class="card-text">Top best Forever</p>
+                                     <p class="card-text"><small class="text-muted">15K reviews</small></p>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="carousel-item col-md-4">
+                             <div class="card">
+                                 <img class="card-img-top img-fluid" src="images/paris.jpg" width="350px"  height="200px" alt="Card image cap">
+                                 <div class="card-body">
+                                     <h4 class="card-title">Hotel Mumbai plaza</h4>
+                                     <p class="card-text">Top best Forever</p>
+                                     <p class="card-text"><small class="text-muted">25K reviews</small></p>
+                                 </div>
+                             </div>
+                         </div>
+                         <a class="carousel-control-prev" href="#myCarousel" role="button"  data-slide="prev">
+                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                             <span class="sr-only">Previous</span>
+                         </a>
+                         <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                             <span class="sr-only">Next</span>
+                         </a>
+                     </div>
+                 </div>
+             </div>
+
+             <div class="bangalore">
+                 <p class="goa-head">Hotels in Bangalore</p>
+                 <img class="goa-img" src="Capture.PNG">
+             </div>
+             <div class="container" style="position: absolute;top:515%;margin-left: 8% " >
+                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                     <div class="carousel-inner row w-100 mx-auto">
+                         <div class="carousel-item col-md-4 active">
+                             <div class="card">
+                                 <img class="card-img-top img-fluid" width="350px" height="200px" src="images/img4.jpg" alt="Card image cap">
+                                 <div class="card-body">
+                                     <h4 class="card-title">Taj Hotel Mumbai</h4>
+                                     <p class="card-text">Top best Forever</p>
+                                     <p class="card-text"><small class="text-muted">24K reviews</small></p>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="carousel-item col-md-4">
+                             <div class="card">
+                                 <img class="card-img-top img-fluid" width="350px"  height="200px" src="images/img3.jpg" alt="Card image cap">
+                                 <div class="card-body">
+                                     <h4 class="card-title">Hotel Marine plaza</h4>
+                                     <p class="card-text"> Top best Forever</p>
+                                     <p class="card-text"><small class="text-muted">12K reviews</small></p>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="carousel-item col-md-4">
+                             <div class="card">
+                                 <img class="card-img-top img-fluid" width="350px"  height="200px" src="images/img2.jfif" alt="Card image cap">
+                                 <div class="card-body">
+                                     <h4 class="card-title">Hotel Mumbai plaza</h4>
+                                     <p class="card-text">Top best Forever</p>
+                                     <p class="card-text"><small class="text-muted">14K reviews</small></p>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="carousel-item col-md-4">
+                             <div class="card">
+                                 <img class="card-img-top img-fluid" src="images/img1.jfif" width="350px"  height="200px" alt="Card image cap">
+                                 <div class="card-body">
+                                     <h4 class="card-title">Fariyas Hotel Mumbai</h4>
+                                     <p class="card-text">Top best Forever</p>
+                                     <p class="card-text"><small class="text-muted">15K reviews</small></p>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="carousel-item col-md-4">
+                             <div class="card">
+                                 <img class="card-img-top img-fluid" src="images/paris.jpg" width="350px"  height="200px" alt="Card image cap">
+                                 <div class="card-body">
+                                     <h4 class="card-title">Hotel Mumbai plaza</h4>
+                                     <p class="card-text">Top best Forever</p>
+                                     <p class="card-text"><small class="text-muted">25K reviews</small></p>
+                                 </div>
+                             </div>
+                         </div>
+                         <a class="carousel-control-prev" href="#myCarousel" role="button"  data-slide="prev">
+                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                             <span class="sr-only">Previous</span>
+                         </a>
+                         <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                             <span class="sr-only">Next</span>
+                         </a>
+                     </div>
+                 </div>
+             </div>
+             <div class="kolkata">
+                 <p class="goa-head">Hotels In Kolkata</p>
+                 <p class="goa-subhead">top best forever</p>
+             </div>
+             <div class="In-kolkata">
+                 <p class="kolkata-subhead">We present top hotels for you</p>
+                 <a href="#">Explore more</a>
+             </div>
+             <div class="container" style="position: absolute;top:600%;left: 8%">
+                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                     <div class="carousel-inner row w-100 mx-auto">
+                         <div class="carousel-item col-md-4 active">
+                             <div class="card">
+                                 <img class="card-img-top img-fluid" width="350px" height="200px" src="images/img4.jpg" alt="Card image cap">
+                                 <div class="card-body">
+                                     <h4 class="card-title">Taj Hotel Mumbai</h4>
+                                     <p class="card-text">Top best Forever</p>
+                                     <p class="card-text"><small class="text-muted">24K reviews</small></p>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="carousel-item col-md-4">
+                             <div class="card">
+                                 <img class="card-img-top img-fluid" width="350px"  height="200px" src="images/img3.jpg" alt="Card image cap">
+                                 <div class="card-body">
+                                     <h4 class="card-title">Hotel Marine plaza</h4>
+                                     <p class="card-text"> Top best Forever</p>
+                                     <p class="card-text"><small class="text-muted">12K reviews</small></p>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="carousel-item col-md-4">
+                             <div class="card">
+                                 <img class="card-img-top img-fluid" width="350px"  height="200px" src="images/img2.jfif" alt="Card image cap">
+                                 <div class="card-body">
+                                     <h4 class="card-title">Hotel Mumbai plaza</h4>
+                                     <p class="card-text">Top best Forever</p>
+                                     <p class="card-text"><small class="text-muted">14K reviews</small></p>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="carousel-item col-md-4">
+                             <div class="card">
+                                 <img class="card-img-top img-fluid" src="images/img1.jfif" width="350px"  height="200px" alt="Card image cap">
+                                 <div class="card-body">
+                                     <h4 class="card-title">Fariyas Hotel Mumbai</h4>
+                                     <p class="card-text">Top best Forever</p>
+                                     <p class="card-text"><small class="text-muted">15K reviews</small></p>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="carousel-item col-md-4">
+                             <div class="card">
+                                 <img class="card-img-top img-fluid" src="images/paris.jpg" width="350px"  height="200px" alt="Card image cap">
+                                 <div class="card-body">
+                                     <h4 class="card-title">Hotel Mumbai plaza</h4>
+                                     <p class="card-text">Top best Forever</p>
+                                     <p class="card-text"><small class="text-muted">25K reviews</small></p>
+                                 </div>
+                             </div>
+                         </div>
+                         <a class="carousel-control-prev" href="#myCarousel" role="button"  data-slide="prev">
+                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                             <span class="sr-only">Previous</span>
+                         </a>
+                         <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                             <span class="sr-only">Next</span>
+                         </a>
+                     </div>
+                 </div>
+             </div>
+             <div class="India">
+                 <p class="goa-head">Hotels in India</p>
+                 <p class="top-text">TOP</p>
+                 <p class="bestindia-text">BEST</p>
+                 <p class="world-text">Let's make world Tour</p>
+                 <p class="memorial-text">Memorial</p>
+                 <p class="forIndia-text">Forever</p>
+                 <img src="manali.jpg" width="250px" height="150px" style="margin-left:70%; margin-top:5%">
+                 <img src="images/img3.jpg" width="250px" height="160px" style="position:absolute;left:152%;bottom:-144%">
+                 <img src="manali.jpg" width="150px" height="200px" style="position:absolute;left:120%;bottom:-142%">
+                 <img src="images/img3.jpg" width="230px" height="250px" style="position:absolute;left:90%;bottom:-490%">
+                 <img src="images/img2.jfif" width="150px" height="250px" style="position:absolute;left:135%;bottom:-440%">
+             </div>
+                 <img src="images/partnerd.PNG" width="100%" style="position: absolute;top:760%">
+                 <footer class="page-footer font-small stylish-color-dark pt-4">
+                     <div class="container text-center text-md-left">
+
+                         <div class="row">
+
+
+                             <button>Contact Us</button>
+                             <p class="safe">Safe & Secure</p>
+                             <p class="safe-pay">secure Payment Gateway</p>
+
+                             <p class="num">+91 1234567890</p>
+
+                             <hr class="clearfix w-100 d-md-none">
+
+                             <!-- Grid column -->
+                             <div class="col-md-2 mx-auto">
+
+                                 <!-- Links -->
+                                 <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Company</h5>
+
+                                 <ul class="list-unstyled">
+                                     <li>
+                                         <p>About us</p>
+                                     </li>
+                                     <li>
+                                         <p>Team</p>
+                                     </li>
+                                     <li>
+                                         <p>Investors</p>
+                                     </li>
+                                     <li>
+                                         <p>Careers</p>
+                                     </li>
+                                 </ul>
+
+                             </div>
+                             <!-- Grid column -->
+
+                             <hr class="clearfix w-100 d-md-none">
+
+                             <!-- Grid column -->
+                             <div class="col-md-2 mx-auto">
+
+                                 <!-- Links -->
+                                 <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Explore</h5>
+
+                                 <ul class="list-unstyled">
+                                     <li>
+                                         <p>Itineraries</p>
+                                     </li>
+                                     <li>
+                                         <p> Travelogues</p>
+                                     </li>
+                                     <li>
+                                         <p>Honeymoons</p>
+                                     </li>
+                                     <li>
+                                         <p>Collections</p>
+                                     </li>
+                                 </ul>
+                             </div>
+                             <hr class="clearfix w-100 d-md-none">
+
+                             <!-- Grid column -->
+                             <div class="col-md-2 mx-auto">
+
+                                 <!-- Links -->
+                                 <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Packages</h5>
+
+                                 <ul class="list-unstyled">
+                                     <li>
+                                         <p>Luxury Holidays</p>
+                                     </li>
+                                     <li>
+                                         <p>Sightseeing</p>
+                                     </li>
+                                     <li>
+                                         <p>Weekend</p>
+                                     </li>
+                                     <li>
+                                         <p>Budget Trips</p>
+                                     </li>
+
+                                 </ul>
+
+                             </div>
+                         </div>
+                     </div>
+             </footer>
+             <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+             <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+                     integrity="sha256-pTxD+DSzIwmwhOqTFN+DB+nHjO4iAsbgfyFq5K5bcE0=" crossorigin="anonymous"></script>
+             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#myCarousel").on("slide.bs.carousel", function(e) {
+                var $e = $(e.relatedTarget);
+                var idx = $e.index();
+                var itemsPerSlide = 3;
+                var totalItems = $(".carousel-item").length;
+
+                if (idx >= totalItems - (itemsPerSlide - 1)) {
+                    var it = itemsPerSlide - (totalItems - idx);
+                    for (var i = 0; i < it; i++) {
+                        // append slides to end
+                        if (e.direction == "left") {
+                            $(".carousel-item")
+                                .eq(i)
+                                .appendTo(".carousel-inner");
+                        } else {
+                            $(".carousel-item")
+                                .eq(0)
+                                .appendTo($(this).find(".carousel-inner"));
+                        }
+                    }
+                }
+            });
+
+        });
+
+    </script>
+    </body>
+</html>
